@@ -3,6 +3,7 @@ node_modules
 /dist
 /public/api/s_connect.php
 /public/api/s_sendmail.php
+README.md
 
 # local env files
 .env.local
