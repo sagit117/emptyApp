@@ -74,38 +74,6 @@
     return $hash;
   }
 
-  /*function getSession($name) {
-    // получить значение из сессии
-    session_start();
-    $str = $_SESSION[$name];
-    session_write_close();
-
-    return $str;
-  }
-
-  function setSession($name, $value) {
-    // установить значение в сессию пользователя
-    session_start();
-    $_SESSION[$name] = $value;
-    session_write_close();
-  }
-
-  function issetSession($name) {
-    // проверяет наличие записи в сессии пользователя
-    session_start();
-     $str = isset($_SESSION[$name]); 
-     session_write_close();
-
-     return $str; // возвращает значение true / false
-  }
-
-  function setHash() { 
-    // установка хэш в сессию пользователя
-    $hash = md5(generateCode(10)); 	// генерация хэш кода
-    setSession('hash', $hash);			// установка хэш кода в сессию
-    return $hash;
-  }*/
-
   function generateCode($length = 6) { // Генератор кода
     $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPRQSTUVWXYZ0123456789-_";
     $code = "";
@@ -168,15 +136,5 @@
 
     return $arr;
   }
-
-  /*function getHashUser($id_user) {
-    // получить значение хэш из БД по ИД пользователя и агенту
-    global $link;
-    $id_user = intval($id_user);
-    $agent = mysqli_real_escape_string($link, $_SERVER["HTTP_USER_AGENT"]);
-    $result = mysqli_query($link, "SELECT `hash` FROM `hash_user` WHERE `id_user`='$id_user' AND `agent`='$agent' LIMIT 1");
-
-    return mysqli_fetch_row($result)[0]; // вернуть первый найденый
-  }*/
   
 ?>

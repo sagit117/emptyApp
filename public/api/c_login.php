@@ -55,21 +55,4 @@
     
   }
 
-  /*if (intval($_GET['userID']) > 0) { 
-    // логин по hash
-    $id_user = intval($_COOKIE['id']); 		// получаем куки ИД
-    $hash = getSession('hash');						// получаем хэш из сессии
-    if ($hash == getHashUser($id_user)) {	// если хэш в сессии найден в БД хэша по ИД пользователя
-      $user = getUser("id", $id_user);		// получить данные пользователя по ИД
-      echo json_encode($user[0]); exit(); // вернуть данные пользователя
-    }
-  }
-
-  function verifyUser($userID) {
-    // проверить совпадает ли хэш с ИД пользователя
-    $hash = getSession('hash');
-    $userID = intval($userID);
-    return ($hash == getHashUser($userID)) ? true : false;
-  }*/
-
 ?>
